@@ -1,0 +1,25 @@
+extends ../shared/template
+
+block content
+  h1.pageHeader Albums
+  #wrapper
+
+    #controls
+      h6 Add a New Album
+      form(method='POST', action='/albums', enctype='multipart/form-data')
+        input(type='text', name='name', placeholder='Album Name')
+        input(type='file', name='photo')
+        button(class='add button button-rounded button-flat-highlight') Add Album
+
+  table#albumList
+    thead
+      tr
+        th Album
+        th Cover Art
+    tbody
+      each album in albums
+        tr
+          td
+            a(href='/albums/#{album._id}')= album.name
+          td
+            #coverArt(style='background-image: url("img/albums/#{album._id}/#{album.photo}")')

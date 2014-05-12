@@ -1,0 +1,19 @@
+extends ../shared/template
+
+block content
+  #container
+    h1.pageHeader Artist Show Page
+
+    table#artistShow
+      thead
+        tr
+          th Song Name
+          th Album Name
+          th Listen
+      tbody
+        each song in songs
+          tr
+            td= song.name
+            td= song.albumName
+            td
+              audio(src='/audios/songs/#{song._id}/#{song.mp3}', controls=true)

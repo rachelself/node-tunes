@@ -6,7 +6,18 @@ html
     link(href='/css/normalize.css', rel='stylesheet')
     link(href='/css/buttons.css', rel='stylesheet')
     link(href='/less/app.css', rel='stylesheet')
-  body
+  body(style='background-image: url(/img/grey_wash_wall.png)')
+    #container
+      nav
+        span.miniLogo NodeTunes
+        span
+          a(href='/', class='button button-rounded button-flat-primary') Home
+        span
+          a(href='/Artists', class='button button-rounded button-flat-action') Artists
+        span
+          a(href='/Albums', class='button button-rounded button-flat-highlight') Albums
+        span
+          a(href='/Songs', class='button button-rounded button-flat-royal') Songs
     block content
 
     script(src='/js/vendor/jquery-2.1.1.js')

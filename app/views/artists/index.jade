@@ -1,0 +1,23 @@
+extends ../shared/template
+
+block content
+  h1.pageHeader Artists
+  #wrapper
+    #controls
+      form(method='POST', action='/artists', enctype='multipart/form-data')
+        h6 Artist Name
+        input(type='text', name='name', placeholder='Name')
+        h6 Artist Photo
+        input(type='file', name='photo')
+        button(class='add artist button button-rounded button-flat-action') Add Artist
+
+  table#artistList
+
+    tbody
+      each artist in artists
+        tr
+          td
+            #imgContainer(style='background-image: url("img/artists/#{artist._id}/#{artist.photo}")')
+        tr
+          td
+            a(href='/artists/#{artist._id}')= artist.name

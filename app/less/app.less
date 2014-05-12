@@ -1,0 +1,291 @@
+@import url(http://fonts.googleapis.com/css?family=Codystar|Ubuntu:300,400,500,700|Droid+Serif:400,700|Audiowide|Press+Start+2P);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,200,400,300,500|Open+Sans:300italic,400italic,400,300,600);
+
+// green #7db500
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body, html{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+#container{
+  margin: 0 auto;
+  height: 100%;
+}
+
+
+nav{
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  float: left;
+  width: 100%;
+  margin-top: 0px;
+  position: absolute;
+  top: 0;
+}
+
+.button.button-rounded.button-flat-primary,
+.button.button-rounded.button-flat-action,
+.button.button-rounded.button-flat-highlight,
+.button.button-rounded.button-flat-royal{
+  margin-right: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+
+#welcome{
+  width: 100%;
+  float: none;
+  margin: 0 auto;
+
+}
+
+#wrapper{
+  float: left;
+  width: 200px;
+}
+
+
+p.logo{
+  font-size: 150px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: -3px;
+  position: relative;
+  top: 180px;
+
+}
+
+
+h2.tag{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  font-size: 26px;
+  color: white;
+  position: relative;
+  top: 190px;
+}
+
+span.miniLogo{
+  color: white;
+  margin-right: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h1.pageHeader{
+  display: block;
+  font-size: 30px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight:400;
+  letter-spacing: 2;
+  position: relative;
+  top: 50px;
+  left: 50px;
+
+}
+
+// #container{
+//   background-color: rgba(255, 255, 255, 0.54);
+//   border-radius: 5px;
+//   padding: 20px;
+//   width: 400px;
+//   height: 100%;
+//   margin: 0 auto;
+//   position: relative;
+//   top: 40px;
+// }
+
+.add{
+  display: block;
+  margin-top: 20px;
+  float: none;
+  text-align: center;
+}
+
+input[type='text']{
+  border-radius: 5px;
+  border: 0;
+}
+
+input[type='file']{
+  color: rgba(0, 0, 0, 0.6);;
+
+  // padding: 10px;
+  //  -webkit-border-radius: 5px;
+  //  -moz-border-radius: 5px;
+  margin: 10px 0px;
+  text-align: center;
+  border-radius: 5px;
+  size: 60;
+  height: 30px;
+  vertical-align: center;
+  cursor: pointer;
+  font-size: 10px;
+
+}
+
+#controls{
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 5px;
+  padding: 10px;
+  // width: 200px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  left: 20px;
+  float: left;
+}
+
+#artistList, #albumList, #songsList{
+
+  height: 100%;
+  float: right;
+  margin: 20px;
+  width: 75%;
+  position: relative;
+  top: 40px;
+  // left: 20px;
+  margin-bottom: 20px;
+}
+
+#songsList{
+  float: right;
+
+}
+
+#filter{
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 5px;
+  padding: 10px;
+  height: 100%;
+  display: block;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  float: left;
+
+}
+
+.button.button-rounded.button-flat{
+  float: left;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+#artistShow, #albumShow{
+
+  height: 100%;
+  float: none;
+  margin: 0 auto;
+  position: relative;
+  top: 60px;
+  margin-bottom: 20px;
+}
+//
+// #songsList{
+//   position: relative;
+//   top: 80px;
+//
+// }
+
+// #filter{
+//   background-color: rgba(255, 255, 255, 0.54);
+//   border-radius: 5px;
+//   padding: 20px;
+//   width: 400px;
+//   height: 100%;
+//   display: inline-block;
+//   position: relative;
+//   top: 60px;
+//
+// }
+table{
+  border-collapse: separate;
+}
+
+th{
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+tr{
+  border: 1px solid #b7b6b6;
+  margin-bottom: 10px;
+
+}
+
+td{
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 14px;
+}
+
+td a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+td a:hover{
+  text-decoration: underline;
+  color: #7db500;
+}
+
+td.genre{
+  text-transform: capitalize;
+}
+
+h6{
+  display: block;
+  text-align: left;
+  padding-left: 5px;
+  margin: 5px 0px;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+form input,
+form select{
+  margin: 5px;
+  margin-bottom: 10px;
+  float: left;
+  width: 90%;
+  display: inline-block;
+  padding: 5px;
+  font-size: 12px;
+
+}
+
+#imgContainer, #coverArt{
+width: 125px;
+height: 125px;
+background-size: cover;
+background-position: center;
+padding: 0;
+margin: 0;
+margin-left: auto;
+margin-right: auto;
+}

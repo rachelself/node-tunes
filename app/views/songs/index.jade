@@ -1,0 +1,74 @@
+extends ../shared/template
+
+block content
+  h1.pageHeader Songs
+  #wrapper
+
+    #controls
+      h6 Add New Song
+      form(method='POST', action='/songs', enctype='multipart/form-data')
+        input(type='text', name='name', placeholder='Title')
+        select(name='artistId')
+          option Select an Artist
+          each artist in artists
+              option(value='#{artist._id}')= artist.name
+
+        select(name='albumId')
+          option Select an Album
+          each album in albums
+              option(value='#{album._id}')= album.name
+
+        h6 Audio File
+        input(type='file', name='audio')
+
+        h6 Genres
+        select(name='genre')
+          option(value='rock') Rock
+          option(value='pop') Pop
+          option(value='instrumental') Instrumental
+          option(value='electronic') Electronic
+          option(value='christian') Christian & Gospel
+          option(value='alternative') Alternative
+          option(value='jazz') Jazz
+          option(value='funk') Funk
+          option(value='rap') Rap
+          option(value='r+b') R&B
+          option(value='country') Country
+        button(class='add button button-rounded button-flat-royal') Add Song
+
+    #filter
+      form(method='GET', action='/songs/filter')
+
+        h6 Filter Songs by Genre
+        select(name='genre')
+          option(value='rock') Rock
+          option(value='pop') Pop
+          option(value='instrumental') Instrumental
+          option(value='electronic') Electronic
+          option(value='christian') Christian & Gospel
+          option(value='alternative') Alternative
+          option(value='jazz') Jazz
+          option(value='funk') Funk
+          option(value='rap') Rap
+          option(value='r+b') R&B
+          option(value='country') Country
+
+        button(class='filter button button-rounded button-flat') Filter
+
+  table#songsList
+    thead
+      tr
+        th Name
+        th Artist
+        th Album
+        th Genre
+        th Listen
+    tbody
+      each song in songs
+        tr
+          td= song.name
+          td= song.artistName
+          td= song.albumName
+          td.genre= song.genre
+          td
+            audio(src='/audios/songs/#{song._id}/#{song.mp3}', controls=true)
